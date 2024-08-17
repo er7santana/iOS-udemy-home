@@ -126,6 +126,23 @@ class HomeViewController: UIViewController {
                             tag: "Bestseller"
                            ),
                   ]),
+            .init(section: .textHeader(id: UUID().uuidString),
+                  body: [
+                    .textHeader(id: UUID().uuidString,
+                                text: "Top course of the year",
+                                highlightedText: nil)
+                  ]),
+            .init(section: .featureCourse(id: UUID().uuidString),
+                  body: [
+                    .featureCourse(id: UUID().uuidString,
+                                   imageLink: "https://cms.santander.com.br/sites/WPS/imagem/imagem-nova-loja-cartao-unique-black/23-12-20_190828_P_unique.png",
+                                   title: "iOS & Swift: Server Driven UI Compositional Layout & SwiftUI",
+                                   author: "Kevin Fok",
+                                   rating: 4.5,
+                                   reviewCount: 224,
+                                   price: 19.99
+                                  )
+                  ])
         ])
         
         collectionView.setDataSource(uiModel: uiModel)

@@ -33,6 +33,7 @@ final class HomeCollectionView: UICollectionView {
         register(TextHeaderCollectionViewCell.self, forCellWithReuseIdentifier: TextHeaderCollectionViewCell.namedIdentifier)
         register(CourseCollectionViewCell.self, forCellWithReuseIdentifier: CourseCollectionViewCell.namedIdentifier)
         register(CategoriesCollectionViewCell.self, forCellWithReuseIdentifier: CategoriesCollectionViewCell.namedIdentifier)
+        register(FeatureCourseCollectionViewCell.self, forCellWithReuseIdentifier: FeatureCourseCollectionViewCell.namedIdentifier)
     }
     
     func setupDataSource() {
@@ -54,6 +55,10 @@ final class HomeCollectionView: UICollectionView {
             case let .categoriesScroller(_, titles):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.namedIdentifier, for: indexPath) as! CategoriesCollectionViewCell
                 cell.configure(titles: titles)
+                return cell
+            case let .featureCourse(_, imageLink, title, author, rating, reviewCount, price):
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeatureCourseCollectionViewCell.namedIdentifier, for: indexPath) as! FeatureCourseCollectionViewCell
+                cell.configure(imageLink: imageLink, title: title, author: author, rating: rating, reviewCount: reviewCount, price: price)
                 return cell
             default:
                 fatalError()
@@ -85,6 +90,8 @@ final class HomeCollectionView: UICollectionView {
                 return self?.makeCourseSwimLaneSection()
             case .categories:
                 return self?.makeCategoriesSection()
+            case .featureCourse:
+                return self?.makeFeaturedCourseSection()
             default:
                 fatalError()
             }
@@ -136,6 +143,17 @@ final class HomeCollectionView: UICollectionView {
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10
         section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20)
+        return section
+    }
+    
+    func makeFeaturedCourseSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(230))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitems: [item])
+        group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
+        let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20)
         return section
     }
