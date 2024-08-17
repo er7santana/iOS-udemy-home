@@ -12,6 +12,8 @@ final class FeatureCourseCollectionViewCell: UICollectionViewCell {
     
     private var hostingController: UIHostingController<FeatureCourseView>!
     
+    var onTap: CustomHandler?
+    
     func configure(imageLink: String, title: String, author: String, rating: Double, reviewCount: Int, price: Decimal) {
         guard hostingController == nil else { return }
         
@@ -21,6 +23,9 @@ final class FeatureCourseCollectionViewCell: UICollectionViewCell {
         hostingController.view.clipsToBounds = true
         hostingController.view.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+        hostingController.rootView.onTap = { [weak self] in
+            self?.onTap?()
         }
     }
 }

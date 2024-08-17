@@ -12,6 +12,8 @@ final class CategoriesCollectionViewCell: UICollectionViewCell {
     
     private var hostingController: UIHostingController<CategoriesView>!
     
+    var onTap: ((String) -> Void)?
+    
     func configure(titles: [String]) {
         guard hostingController == nil else { return }
         let categoriesView = CategoriesView(titles: titles)
@@ -22,5 +24,8 @@ final class CategoriesCollectionViewCell: UICollectionViewCell {
         hostingController.view.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-    }    
+        hostingController.rootView.onTap = { [weak self] title in
+            self?.onTap?(title)
+        }
+    }
 }

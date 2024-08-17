@@ -8,7 +8,7 @@
 import UIKit
 
 class AttributedTappableLabel: UILabel {
-    var onTap: (() -> Void)?
+    var onTap: CustomHandler?
     var tapRange: NSRange?
     var labelFont: UIFont?
     

@@ -15,6 +15,8 @@ struct FeatureCourseView: View {
     let reviewCount: Int
     let price: Decimal
     
+    var onTap: CustomHandler?
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             if #available(iOS 15.0, *) {
@@ -48,6 +50,9 @@ struct FeatureCourseView: View {
             
             Text(price.priceFormat)
                 .font(.system(size: 10, weight: .bold))
+        }
+        .onTapGesture {
+            onTap?()
         }
     }
 }

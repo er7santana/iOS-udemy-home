@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UdemyBusinessView: View {
-    var onTap: (() -> Void)?
+    var onTap: CustomHandler?
     var body: some View {
         VStack(spacing: 20) {
             Text("Top companies trust Udemy")

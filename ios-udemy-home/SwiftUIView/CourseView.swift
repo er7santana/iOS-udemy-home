@@ -16,6 +16,8 @@ struct CourseView: View {
     let price: Decimal
     let tag: String
     
+    var onTap: CustomHandler?
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             if #available(iOS 15.0, *) {
@@ -59,6 +61,9 @@ struct CourseView: View {
                         .fill(Color.yellow.opacity(0.4))
                 )
             Spacer()
+        }
+        .onTapGesture {
+            onTap?()
         }
     }
 }

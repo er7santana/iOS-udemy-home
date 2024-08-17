@@ -12,7 +12,7 @@ final class UdemyBusinessCollectionViewCell: UICollectionViewCell {
     
     private var hostingController: UIHostingController<UdemyBusinessView>!
     
-    var onTap: (() -> Void)?
+    var onTap: CustomHandler?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

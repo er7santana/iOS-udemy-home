@@ -8,9 +8,12 @@
 import SnapKit
 import UIKit
 
+typealias CustomHandler = (() -> Void)
+
 final class TextHeaderCollectionViewCell: UICollectionViewCell {
     
     let label = AttributedTappableLabel()
+    var onTap: CustomHandler?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,8 +38,8 @@ final class TextHeaderCollectionViewCell: UICollectionViewCell {
         label.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        label.onTap = {
-            print(">>>>>>>>>>>> tapped")
+        label.onTap = { [weak self] in
+            self?.onTap?()
         }
     }
 }

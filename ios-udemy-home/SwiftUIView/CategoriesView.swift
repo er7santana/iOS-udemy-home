@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoriesView: View {
     
     let titles: [String]
+    var onTap: ((String) -> Void)?
     
     var midPoint: Int {
         return Int(titles.count / 2)
@@ -19,12 +20,16 @@ struct CategoriesView: View {
             LazyVStack(alignment: .leading, spacing: 8) {
                 HStack {
                     ForEach(titles[..<midPoint], id: \.self) { title in
-                        CategoryButton(title: title)
+                        CategoryButton(title: title) {
+                            onTap?(title)
+                        }
                     }
                 }
                 HStack {
                     ForEach(titles[midPoint...], id: \.self) { title in
-                        CategoryButton(title: title)
+                        CategoryButton(title: title) {
+                            onTap?(title)
+                        }
                     }
                 }
             }
@@ -35,7 +40,7 @@ struct CategoriesView: View {
 struct CategoryButton: View {
     
     let title: String
-    var onTap: (() -> Void)?
+    var onTap: CustomHandler?
     
     var body: some View {
         Button {
@@ -51,5 +56,7 @@ struct CategoryButton: View {
 }
 
 #Preview {
-    CategoriesView(titles: Category.allCases.map { $0.rawValue.camelCaseToEnglish.useShortAndFormat })
+    CategoriesView(titles: Category.allCases.map { $0.rawValue.camelCaseToEnglish.useShortAndFormat }) { title in
+        print(title)
+    }
 }
