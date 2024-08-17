@@ -5,12 +5,19 @@
 //  Created by Eliezer Rodrigo Beltramin de Sant Ana on 17/08/24.
 //
 
+import Combine
 import SnapKit
 import UIKit
 
 class HomeViewController: UIViewController {
     
     private let collectionView = HomeCollectionView()
+    private var cancellables = Set<AnyCancellable>()
+    
+    override func loadView() {
+        super.loadView()
+        observe()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,6 +158,34 @@ class HomeViewController: UIViewController {
         ])
         
         collectionView.setDataSource(uiModel: uiModel)
+    }
+    
+    private func observe() {
+        collectionView.eventPublisher.sink { [weak self] event in
+            switch event {
+            case let .itemTapped(item):
+                self?.handleItemTapped(item: item)
+                break
+            }
+        }
+        .store(in: &cancellables)
+    }
+    
+    private func handleItemTapped(item: HomeUIModel.Item) {
+        switch item {
+        case .mainBanner(let id, let imageLink, let title, let caption):
+            print(">>>>>>>> mainBanner tapped")
+        case .course(let id, let imageLink, let title, let author, let rating, let reviewCount, let price, let tag):
+            print(">>>>>>>> course tapped \(id)")
+        case .textHeader(let id, let text, let highlightedText):
+            print(">>>>>>>> textHeader tapped")
+        case .udemyBusinessBanner(let id, let link):
+            print(">>>>>>>> businessBanner tapped")
+        case .categoriesScroller(let id, let titles):
+            print(">>>>>>>> categories tapped \(titles.first ?? "")")
+        case .featureCourse(let id, let imageLink, let title, let author, let rating, let reviewCount, let price):
+            print(">>>>>>>> feature tapped")
+        }
     }
     
     func setupView() {

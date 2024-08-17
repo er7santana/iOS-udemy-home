@@ -5,12 +5,22 @@
 //  Created by Eliezer Rodrigo Beltramin de Sant Ana on 17/08/24.
 //
 
+import Combine
 import UIKit
 
 final class HomeCollectionView: UICollectionView {
     
+    enum Event {
+        case itemTapped(HomeUIModel.Item)
+    }
+    
     private var diffableDataSource: UICollectionViewDiffableDataSource<HomeUIModel.Section, HomeUIModel.Item>!
     private var uiModel: HomeUIModel?
+    
+    private let eventSubject = PassthroughSubject<Event, Never>()
+    var eventPublisher: AnyPublisher<Event, Never> {
+        return eventSubject.eraseToAnyPublisher()
+    }
     
     init() {
         super.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -48,35 +58,36 @@ final class HomeCollectionView: UICollectionView {
             case let .textHeader(id, text, highlightedText):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TextHeaderCollectionViewCell.namedIdentifier, for: indexPath) as! TextHeaderCollectionViewCell
                 cell.configure(text: text, highlightedText: highlightedText)
-                cell.onTap = {
-                    print(">>>>>>>> text Header link tapped: Id: \(id) | link: \(highlightedText ?? "")")
+                cell.onTap = { [weak self] in
+                    self?.eventSubject.send(.itemTapped(item))
                 }
                 return cell
             case let .course(id, imageLink, title, author, rating, reviewCount, price, tag):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseCollectionViewCell.namedIdentifier, for: indexPath) as! CourseCollectionViewCell
                 cell.configure(imageLink: imageLink, title: title, author: author, rating: rating, reviewCount: reviewCount, price: price, tag: tag)
-                cell.onTap = {
-                    print(">>>>>>>>>>>>> course tapped: \(id) ")
+                cell.onTap = { [weak self] in
+                    self?.eventSubject.send(.itemTapped(item))
                 }
                 return cell
-            case let .categoriesScroller(_, titles):
+            case let .categoriesScroller(id, titles):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.namedIdentifier, for: indexPath) as! CategoriesCollectionViewCell
                 cell.configure(titles: titles)
-                cell.onTap = { title in
-                    print(">>>>>>> tapped on  \(title)")
+                cell.onTap = { [weak self] title in
+                    let selected = HomeUIModel.Item.categoriesScroller(id: id, titles: [title])
+                    self?.eventSubject.send(.itemTapped(selected))
                 }
                 return cell
             case let .featureCourse(id, imageLink, title, author, rating, reviewCount, price):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeatureCourseCollectionViewCell.namedIdentifier, for: indexPath) as! FeatureCourseCollectionViewCell
                 cell.configure(imageLink: imageLink, title: title, author: author, rating: rating, reviewCount: reviewCount, price: price)
-                cell.onTap = {
-                    print(">>>>>> featured Course tapped \(id)")
+                cell.onTap = { [weak self] in
+                    self?.eventSubject.send(.itemTapped(item))
                 }
                 return cell
             case let .udemyBusinessBanner(_, link):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UdemyBusinessCollectionViewCell.namedIdentifier, for: indexPath) as! UdemyBusinessCollectionViewCell
-                cell.onTap = {
-                    print(">>>>>>>>> Tapped on udemy Business \(link)")
+                cell.onTap = { [weak self] in
+                    self?.eventSubject.send(.itemTapped(item))
                 }
                 return cell
             }
@@ -111,6 +122,7 @@ final class HomeCollectionView: UICollectionView {
                 return self?.makeFeaturedCourseSection()
             case .udemyBusinessBanner:
                 return self?.makeUdemyBusinessSection()
+            }
         }
         
         return UICollectionViewCompositionalLayout(sectionProvider: provider)
