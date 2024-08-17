@@ -11,10 +11,23 @@ import UIKit
 class HomeViewController: UIViewController {
     
     private let collectionView = HomeCollectionView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        let uiModel = HomeUIModel(sectionModels: [
+            .init(section: .mainBanner(id: "123"),
+                  body: [
+                    .mainBanner(id: "234",
+                                imageLink: "https://cms.santander.com.br/sites/WPS/imagem/img-cartao-quartz-aa/22-09-16_181507_P_cartao-quartz-aa.png",
+                                title: "Some title",
+                                caption: "Some caption"
+                               )
+                  ])
+        ])
+        
+        collectionView.setupUIModel(uiModel: uiModel)
     }
     
     func setupView() {

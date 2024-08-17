@@ -9,6 +9,8 @@ import Foundation
 
 struct HomeUIModel: Hashable {
     
+    let sectionModels: [SectionModel]
+    
     struct SectionModel: Hashable {
         let section: Section
         let body: [Item]
