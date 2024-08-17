@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PlaceholderImageView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Rectangle()
+            .foregroundColor(Color.gray.opacity(0.3))
     }
 }
 
