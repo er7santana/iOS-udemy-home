@@ -24,9 +24,16 @@
 		F80F677F2C709C4D0009D517 /* PlaceholderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F677E2C709C4D0009D517 /* PlaceholderImageView.swift */; };
 		F80F67812C709C5E0009D517 /* FeatureCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67802C709C5E0009D517 /* FeatureCourseView.swift */; };
 		F80F67832C709C750009D517 /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67822C709C750009D517 /* HomeCollectionView.swift */; };
+		F80F67852C709D750009D517 /* AttributedTapLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67842C709D750009D517 /* AttributedTapLabel.swift */; };
+		F80F67872C709D7F0009D517 /* MainBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67862C709D7F0009D517 /* MainBannerCollectionViewCell.swift */; };
+		F80F67892C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67882C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift */; };
+		F80F678B2C709D950009D517 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F678A2C709D950009D517 /* CourseCollectionViewCell.swift */; };
+		F80F678D2C709DA10009D517 /* TextHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F678C2C709DA10009D517 /* TextHeaderCollectionViewCell.swift */; };
+		F80F678F2C709DAB0009D517 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F678E2C709DAB0009D517 /* CategoriesCollectionViewCell.swift */; };
+		F80F67912C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67902C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift */; };
 		F859F0E42C70964800D3A10E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E32C70964800D3A10E /* AppDelegate.swift */; };
 		F859F0E62C70964800D3A10E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E52C70964800D3A10E /* SceneDelegate.swift */; };
-		F859F0E82C70964800D3A10E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E72C70964800D3A10E /* ViewController.swift */; };
+		F859F0E82C70964800D3A10E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E72C70964800D3A10E /* HomeViewController.swift */; };
 		F859F0EB2C70964800D3A10E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F859F0EA2C70964800D3A10E /* Base */; };
 		F859F0ED2C70964A00D3A10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F859F0EC2C70964A00D3A10E /* Assets.xcassets */; };
 		F859F0F02C70964A00D3A10E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F859F0EF2C70964A00D3A10E /* Base */; };
@@ -49,10 +56,17 @@
 		F80F677E2C709C4D0009D517 /* PlaceholderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderImageView.swift; sourceTree = "<group>"; };
 		F80F67802C709C5E0009D517 /* FeatureCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCourseView.swift; sourceTree = "<group>"; };
 		F80F67822C709C750009D517 /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
+		F80F67842C709D750009D517 /* AttributedTapLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTapLabel.swift; sourceTree = "<group>"; };
+		F80F67862C709D7F0009D517 /* MainBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		F80F67882C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdemyBusinessCollectionViewCell.swift; sourceTree = "<group>"; };
+		F80F678A2C709D950009D517 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		F80F678C2C709DA10009D517 /* TextHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		F80F678E2C709DAB0009D517 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		F80F67902C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		F859F0E02C70964800D3A10E /* ios-udemy-home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-udemy-home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F859F0E32C70964800D3A10E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F859F0E52C70964800D3A10E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F859F0E72C70964800D3A10E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F859F0E72C70964800D3A10E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F859F0EA2C70964800D3A10E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F859F0EC2C70964A00D3A10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F859F0EF2C70964A00D3A10E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +112,7 @@
 			children = (
 				F80F676B2C709B9D0009D517 /* JSON */,
 				F80F67822C709C750009D517 /* HomeCollectionView.swift */,
-				F859F0E72C70964800D3A10E /* ViewController.swift */,
+				F859F0E72C70964800D3A10E /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -138,6 +152,13 @@
 		F80F67622C709B420009D517 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F80F67842C709D750009D517 /* AttributedTapLabel.swift */,
+				F80F67862C709D7F0009D517 /* MainBannerCollectionViewCell.swift */,
+				F80F67882C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift */,
+				F80F678A2C709D950009D517 /* CourseCollectionViewCell.swift */,
+				F80F678C2C709DA10009D517 /* TextHeaderCollectionViewCell.swift */,
+				F80F678E2C709DAB0009D517 /* CategoriesCollectionViewCell.swift */,
+				F80F67902C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,20 +281,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				F80F67662C709B780009D517 /* Extension+Decimal.swift in Sources */,
+				F80F67852C709D750009D517 /* AttributedTapLabel.swift in Sources */,
 				F80F67642C709B670009D517 /* Extension+UICollectionViewCell.swift in Sources */,
 				F80F67682C709B820009D517 /* Extension+String.swift in Sources */,
 				F80F67732C709BFE0009D517 /* APIResponse.swift in Sources */,
-				F859F0E82C70964800D3A10E /* ViewController.swift in Sources */,
+				F859F0E82C70964800D3A10E /* HomeViewController.swift in Sources */,
 				F80F67832C709C750009D517 /* HomeCollectionView.swift in Sources */,
 				F80F676F2C709BEE0009D517 /* UIHomeModel.swift in Sources */,
 				F80F677F2C709C4D0009D517 /* PlaceholderImageView.swift in Sources */,
 				F80F67712C709BF40009D517 /* Category.swift in Sources */,
 				F80F67792C709C2E0009D517 /* UdemyBusinessView.swift in Sources */,
+				F80F67892C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift in Sources */,
 				F80F677B2C709C340009D517 /* CategoriesView.swift in Sources */,
 				F80F67772C709C1B0009D517 /* ReviewRatingView.swift in Sources */,
 				F80F67752C709C0C0009D517 /* CourseView.swift in Sources */,
+				F80F678D2C709DA10009D517 /* TextHeaderCollectionViewCell.swift in Sources */,
+				F80F678B2C709D950009D517 /* CourseCollectionViewCell.swift in Sources */,
 				F80F677D2C709C400009D517 /* MainBannerView.swift in Sources */,
+				F80F678F2C709DAB0009D517 /* CategoriesCollectionViewCell.swift in Sources */,
+				F80F67872C709D7F0009D517 /* MainBannerCollectionViewCell.swift in Sources */,
 				F80F676A2C709B920009D517 /* HomeUIModelHelper.swift in Sources */,
+				F80F67912C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift in Sources */,
 				F80F67812C709C5E0009D517 /* FeatureCourseView.swift in Sources */,
 				F859F0E42C70964800D3A10E /* AppDelegate.swift in Sources */,
 				F859F0E62C70964800D3A10E /* SceneDelegate.swift in Sources */,
