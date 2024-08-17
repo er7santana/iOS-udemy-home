@@ -142,6 +142,11 @@ class HomeViewController: UIViewController {
                                    reviewCount: 224,
                                    price: 19.99
                                   )
+                  ]),
+            .init(section: .udemyBusinessBanner(id: UUID().uuidString),
+                  body: [
+                    .udemyBusinessBanner(id: UUID().uuidString,
+                                         link: "https://www.santander.com.br")
                   ])
         ])
         
