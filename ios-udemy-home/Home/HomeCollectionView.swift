@@ -23,22 +23,27 @@ final class HomeCollectionView: UICollectionView {
         return nil
     }
     
-    func setupUIModel(uiModel: HomeUIModel) {
+    func setDataSource(uiModel: HomeUIModel) {
         self.uiModel = uiModel
         self.applySnapshot()
     }
     
     func setup() {        
         register(MainBannerCollectionViewCell.self, forCellWithReuseIdentifier: MainBannerCollectionViewCell.namedIdentifier)
+        register(TextHeaderCollectionViewCell.self, forCellWithReuseIdentifier: TextHeaderCollectionViewCell.namedIdentifier)
     }
     
     func setupDataSource() {
         diffableDataSource = UICollectionViewDiffableDataSource(collectionView: self,
                                                                 cellProvider: { collectionView, indexPath, item in
             switch item {
-            case let .mainBanner(id, imageLink, title, caption):
+            case let .mainBanner(_, imageLink, title, caption):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainBannerCollectionViewCell.namedIdentifier, for: indexPath) as! MainBannerCollectionViewCell
                 cell.configure(imageLink: imageLink, title: title, caption: caption)
+                return cell
+            case let .textHeader(_, text, highlightedText):
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TextHeaderCollectionViewCell.namedIdentifier, for: indexPath) as! TextHeaderCollectionViewCell
+                cell.configure(text: text, highlightedText: highlightedText)
                 return cell
             default:
                 fatalError()
@@ -62,7 +67,10 @@ final class HomeCollectionView: UICollectionView {
             
             switch sectionModel.section {
             case .mainBanner:
-                return self?.makeBannerSection()
+                return self?.makeMainBannerSection()
+            case .textHeader:
+                guard case let .textHeader(_, text, highlightedText) = sectionModel.body.first else { return nil }
+                return self?.makeTextHeaderSection(text: text, highlightedText: highlightedText)
             default:
                 fatalError()
             }
@@ -71,11 +79,26 @@ final class HomeCollectionView: UICollectionView {
         return UICollectionViewCompositionalLayout(sectionProvider: provider)
     }
     
-    func makeBannerSection() -> NSCollectionLayoutSection {
+    func makeMainBannerSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(220))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitems: [item])
-        return NSCollectionLayoutSection(group: group)
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0)
+        return section
+    }
+    
+    func makeTextHeaderSection(text: String, highlightedText: String?) -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let height = AttributedTappableLabel.heightForWidth(frame.size.width, text: text)
+        
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(height))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 8, trailing: 20)
+        return section
     }
 }

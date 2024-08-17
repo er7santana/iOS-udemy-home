@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct ReviewRatingView: View {
+    
+    let rating: Double
+    let reviewCount: Int
+    
     var body: some View {
-        Text("Hello, World!")
+        HStack(spacing: 4) {
+            Text(rating.description)
+                .foregroundColor(.orange)
+                .font(.system(size: 10, weight: .semibold))
+            
+            Image(systemName: "star.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(.yellow)
+                .frame(height: 10)
+            
+            Text(reviewCount.description.withBrackets)
+                .foregroundColor(.secondary)
+                .font(.system(size: 10))
+            
+            
+        }
     }
 }
 
 #Preview {
-    ReviewRatingView()
+    ReviewRatingView(rating: 4.5, reviewCount: 4226)
 }

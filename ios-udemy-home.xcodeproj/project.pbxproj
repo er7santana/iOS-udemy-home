@@ -24,7 +24,7 @@
 		F80F677F2C709C4D0009D517 /* PlaceholderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F677E2C709C4D0009D517 /* PlaceholderImageView.swift */; };
 		F80F67812C709C5E0009D517 /* FeatureCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67802C709C5E0009D517 /* FeatureCourseView.swift */; };
 		F80F67832C709C750009D517 /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67822C709C750009D517 /* HomeCollectionView.swift */; };
-		F80F67852C709D750009D517 /* AttributedTapLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67842C709D750009D517 /* AttributedTapLabel.swift */; };
+		F80F67852C709D750009D517 /* AttributedTappableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67842C709D750009D517 /* AttributedTappableLabel.swift */; };
 		F80F67872C709D7F0009D517 /* MainBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67862C709D7F0009D517 /* MainBannerCollectionViewCell.swift */; };
 		F80F67892C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67882C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift */; };
 		F80F678B2C709D950009D517 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F678A2C709D950009D517 /* CourseCollectionViewCell.swift */; };
@@ -56,7 +56,7 @@
 		F80F677E2C709C4D0009D517 /* PlaceholderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderImageView.swift; sourceTree = "<group>"; };
 		F80F67802C709C5E0009D517 /* FeatureCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCourseView.swift; sourceTree = "<group>"; };
 		F80F67822C709C750009D517 /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
-		F80F67842C709D750009D517 /* AttributedTapLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTapLabel.swift; sourceTree = "<group>"; };
+		F80F67842C709D750009D517 /* AttributedTappableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTappableLabel.swift; sourceTree = "<group>"; };
 		F80F67862C709D7F0009D517 /* MainBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		F80F67882C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdemyBusinessCollectionViewCell.swift; sourceTree = "<group>"; };
 		F80F678A2C709D950009D517 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		F80F67622C709B420009D517 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F80F67842C709D750009D517 /* AttributedTapLabel.swift */,
+				F80F67842C709D750009D517 /* AttributedTappableLabel.swift */,
 				F80F67862C709D7F0009D517 /* MainBannerCollectionViewCell.swift */,
 				F80F67882C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift */,
 				F80F678A2C709D950009D517 /* CourseCollectionViewCell.swift */,
@@ -281,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F80F67662C709B780009D517 /* Extension+Decimal.swift in Sources */,
-				F80F67852C709D750009D517 /* AttributedTapLabel.swift in Sources */,
+				F80F67852C709D750009D517 /* AttributedTappableLabel.swift in Sources */,
 				F80F67642C709B670009D517 /* Extension+UICollectionViewCell.swift in Sources */,
 				F80F67682C709B820009D517 /* Extension+String.swift in Sources */,
 				F80F67732C709BFE0009D517 /* APIResponse.swift in Sources */,

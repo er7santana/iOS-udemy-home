@@ -24,10 +24,16 @@ class HomeViewController: UIViewController {
                                 title: "Some title",
                                 caption: "Some caption"
                                )
+                  ]),
+            .init(section: .textHeader(id: "456"),
+                  body: [
+                    .textHeader(id: UUID().uuidString,
+                                text: "Newest courses in Mobile Development",
+                                highlightedText: "Mobile Development")
                   ])
         ])
         
-        collectionView.setupUIModel(uiModel: uiModel)
+        collectionView.setDataSource(uiModel: uiModel)
     }
     
     func setupView() {
