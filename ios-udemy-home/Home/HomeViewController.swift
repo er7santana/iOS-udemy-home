@@ -76,6 +76,11 @@ class HomeViewController: UIViewController {
                                 text: "Categories",
                                 highlightedText: nil)
                   ]),
+            .init(section: .categories(id: UUID().uuidString),
+                  body: [
+                    .categoriesScroller(id: UUID().uuidString,
+                                        titles: Category.allCases.map { $0.rawValue.camelCaseToEnglish.useShortAndFormat.capitalized })
+                  ])
         ])
         
         collectionView.setDataSource(uiModel: uiModel)

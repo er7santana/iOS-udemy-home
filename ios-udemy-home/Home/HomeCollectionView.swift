@@ -32,6 +32,7 @@ final class HomeCollectionView: UICollectionView {
         register(MainBannerCollectionViewCell.self, forCellWithReuseIdentifier: MainBannerCollectionViewCell.namedIdentifier)
         register(TextHeaderCollectionViewCell.self, forCellWithReuseIdentifier: TextHeaderCollectionViewCell.namedIdentifier)
         register(CourseCollectionViewCell.self, forCellWithReuseIdentifier: CourseCollectionViewCell.namedIdentifier)
+        register(CategoriesCollectionViewCell.self, forCellWithReuseIdentifier: CategoriesCollectionViewCell.namedIdentifier)
     }
     
     func setupDataSource() {
@@ -49,6 +50,10 @@ final class HomeCollectionView: UICollectionView {
             case let .course(_, imageLink, title, author, rating, reviewCount, price, tag):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CourseCollectionViewCell.namedIdentifier, for: indexPath) as! CourseCollectionViewCell
                 cell.configure(imageLink: imageLink, title: title, author: author, rating: rating, reviewCount: reviewCount, price: price, tag: tag)
+                return cell
+            case let .categoriesScroller(_, titles):
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.namedIdentifier, for: indexPath) as! CategoriesCollectionViewCell
+                cell.configure(titles: titles)
                 return cell
             default:
                 fatalError()
@@ -78,6 +83,8 @@ final class HomeCollectionView: UICollectionView {
                 return self?.makeTextHeaderSection(text: text, highlightedText: highlightedText)
             case .courseSwimLane:
                 return self?.makeCourseSwimLaneSection()
+            case .categories:
+                return self?.makeCategoriesSection()
             default:
                 fatalError()
             }
@@ -113,6 +120,18 @@ final class HomeCollectionView: UICollectionView {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let layoutSize = NSCollectionLayoutSize(widthDimension: .absolute(160), heightDimension: .absolute(220))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 10
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20)
+        return section
+    }
+    
+    func makeCategoriesSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(88))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10
