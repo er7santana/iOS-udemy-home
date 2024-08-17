@@ -17,20 +17,65 @@ class HomeViewController: UIViewController {
         setupView()
         
         let uiModel = HomeUIModel(sectionModels: [
-            .init(section: .mainBanner(id: "123"),
+            .init(section: .mainBanner(id: UUID().uuidString),
                   body: [
-                    .mainBanner(id: "234",
+                    .mainBanner(id: UUID().uuidString,
                                 imageLink: "https://cms.santander.com.br/sites/WPS/imagem/img-cartao-quartz-aa/22-09-16_181507_P_cartao-quartz-aa.png",
                                 title: "Some title",
                                 caption: "Some caption"
                                )
                   ]),
-            .init(section: .textHeader(id: "456"),
+            .init(section: .textHeader(id: UUID().uuidString),
                   body: [
                     .textHeader(id: UUID().uuidString,
                                 text: "Newest courses in Mobile Development",
                                 highlightedText: "Mobile Development")
-                  ])
+                  ]),
+            .init(section: .courseSwimLane(id: UUID().uuidString),
+                  body: [
+                    .course(id: UUID().uuidString,
+                            imageLink: "https://cms.santander.com.br/sites/MOB_Propostas/imagemproposta/campo-boxer-cmc/24-08-13_193036_P_banner_lp_aproveite_beneficios_c+c_desktop_v2.jpg",
+                            title: "iOS & Swift: Server Driven UI Compositional Layout & SwiftUI",
+                            author: "Kevin Fok",
+                            rating: 4.5,
+                            reviewCount: 224,
+                            price: 19.99,
+                            tag: "Bestseller"
+                           ),
+                    .course(id: UUID().uuidString,
+                            imageLink: "https://cms.santander.com.br/sites/MOB_Propostas/imagemproposta/campo-boxer-cmc/24-08-13_193036_M_banner_lp_pre_venda_shows_c+c_v2.jpg",
+                            title: "iOS & Swift: Server Driven UI Compositional Layout & SwiftUI",
+                            author: "Kevin Fok",
+                            rating: 4.5,
+                            reviewCount: 224,
+                            price: 19.99,
+                            tag: "Bestseller"
+                           ),
+                    .course(id: UUID().uuidString,
+                            imageLink: "https://cms.santander.com.br/sites/WPS/imagem/imagem-nova-loja-cartao-smiles-gold/21-06-16_162806_P_smiles_gold_vs.png",
+                            title: "iOS & Swift: Server Driven UI Compositional Layout & SwiftUI",
+                            author: "Kevin Fok",
+                            rating: 4.5,
+                            reviewCount: 224,
+                            price: 19.99,
+                            tag: "Bestseller"
+                           ),
+                    .course(id: UUID().uuidString,
+                            imageLink: "https://cms.santander.com.br/sites/WPS/imagem/imagem-nova-loja-cartao-unique-black/23-12-20_190828_P_unique.png",
+                            title: "iOS & Swift: Server Driven UI Compositional Layout & SwiftUI",
+                            author: "Kevin Fok",
+                            rating: 4.5,
+                            reviewCount: 224,
+                            price: 19.99,
+                            tag: "Bestseller"
+                           ),
+                  ]),
+            .init(section: .textHeader(id: UUID().uuidString),
+                  body: [
+                    .textHeader(id: UUID().uuidString,
+                                text: "Categories",
+                                highlightedText: nil)
+                  ]),
         ])
         
         collectionView.setDataSource(uiModel: uiModel)

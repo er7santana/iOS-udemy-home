@@ -39,6 +39,7 @@ struct CourseView: View {
             Text(title)
                 .font(.system(size: 12, weight: .bold))
                 .fixedSize(horizontal: false, vertical: true)
+                .lineLimit(4)
             
             Text(author)
                 .font(.system(size: 12, weight: .regular))
@@ -65,7 +66,7 @@ struct CourseView: View {
 #Preview {
     CourseView(
         imageLink: "https://cms.santander.com.br/sites/MOB_Propostas/imagemproposta/campo-boxer-cmc/24-08-13_193036_P_banner_lp_aproveite_beneficios_c+c_desktop_v2.jpg",
-        title: "iOS & Swift: Server Drive UI Compositional Layout & SwiftUI",
+        title: "iOS & Swift: Server Driven UI Compositional Layout & SwiftUI",
         author: "Kevin Fok",
         rating: 4.5,
         reviewCount: 224,
