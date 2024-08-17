@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80F675B2C709A6B0009D517 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F80F675A2C709A6B0009D517 /* SnapKit */; };
+		F80F67642C709B670009D517 /* Extension+UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67632C709B670009D517 /* Extension+UICollectionViewCell.swift */; };
+		F80F67662C709B780009D517 /* Extension+Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67652C709B780009D517 /* Extension+Decimal.swift */; };
+		F80F67682C709B820009D517 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67672C709B820009D517 /* Extension+String.swift */; };
+		F80F676A2C709B920009D517 /* HomeUIModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67692C709B920009D517 /* HomeUIModelHelper.swift */; };
+		F80F676D2C709BBE0009D517 /* payload.json in Resources */ = {isa = PBXBuildFile; fileRef = F80F676C2C709BBE0009D517 /* payload.json */; };
+		F80F676F2C709BEE0009D517 /* UIHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F676E2C709BEE0009D517 /* UIHomeModel.swift */; };
+		F80F67712C709BF40009D517 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67702C709BF40009D517 /* Category.swift */; };
+		F80F67732C709BFE0009D517 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67722C709BFE0009D517 /* APIResponse.swift */; };
+		F80F67752C709C0C0009D517 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67742C709C0C0009D517 /* CourseView.swift */; };
+		F80F67772C709C1B0009D517 /* ReviewRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67762C709C1B0009D517 /* ReviewRatingView.swift */; };
+		F80F67792C709C2E0009D517 /* UdemyBusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67782C709C2E0009D517 /* UdemyBusinessView.swift */; };
+		F80F677B2C709C340009D517 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F677A2C709C340009D517 /* CategoriesView.swift */; };
+		F80F677D2C709C400009D517 /* MainBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F677C2C709C400009D517 /* MainBannerView.swift */; };
+		F80F677F2C709C4D0009D517 /* PlaceholderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F677E2C709C4D0009D517 /* PlaceholderImageView.swift */; };
+		F80F67812C709C5E0009D517 /* FeatureCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67802C709C5E0009D517 /* FeatureCourseView.swift */; };
+		F80F67832C709C750009D517 /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67822C709C750009D517 /* HomeCollectionView.swift */; };
 		F859F0E42C70964800D3A10E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E32C70964800D3A10E /* AppDelegate.swift */; };
 		F859F0E62C70964800D3A10E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E52C70964800D3A10E /* SceneDelegate.swift */; };
 		F859F0E82C70964800D3A10E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E72C70964800D3A10E /* ViewController.swift */; };
@@ -16,6 +33,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F80F67632C709B670009D517 /* Extension+UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionViewCell.swift"; sourceTree = "<group>"; };
+		F80F67652C709B780009D517 /* Extension+Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Decimal.swift"; sourceTree = "<group>"; };
+		F80F67672C709B820009D517 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		F80F67692C709B920009D517 /* HomeUIModelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIModelHelper.swift; sourceTree = "<group>"; };
+		F80F676C2C709BBE0009D517 /* payload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payload.json; sourceTree = "<group>"; };
+		F80F676E2C709BEE0009D517 /* UIHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHomeModel.swift; sourceTree = "<group>"; };
+		F80F67702C709BF40009D517 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F80F67722C709BFE0009D517 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		F80F67742C709C0C0009D517 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		F80F67762C709C1B0009D517 /* ReviewRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRatingView.swift; sourceTree = "<group>"; };
+		F80F67782C709C2E0009D517 /* UdemyBusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdemyBusinessView.swift; sourceTree = "<group>"; };
+		F80F677A2C709C340009D517 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		F80F677C2C709C400009D517 /* MainBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerView.swift; sourceTree = "<group>"; };
+		F80F677E2C709C4D0009D517 /* PlaceholderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderImageView.swift; sourceTree = "<group>"; };
+		F80F67802C709C5E0009D517 /* FeatureCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCourseView.swift; sourceTree = "<group>"; };
+		F80F67822C709C750009D517 /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
 		F859F0E02C70964800D3A10E /* ios-udemy-home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-udemy-home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F859F0E32C70964800D3A10E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F859F0E52C70964800D3A10E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +64,92 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80F675B2C709A6B0009D517 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F80F675C2C709AD90009D517 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F859F0E32C70964800D3A10E /* AppDelegate.swift */,
+				F859F0E52C70964800D3A10E /* SceneDelegate.swift */,
+				F859F0E92C70964800D3A10E /* Main.storyboard */,
+				F859F0EC2C70964A00D3A10E /* Assets.xcassets */,
+				F859F0EE2C70964A00D3A10E /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F80F675D2C709B190009D517 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F80F67632C709B670009D517 /* Extension+UICollectionViewCell.swift */,
+				F80F67652C709B780009D517 /* Extension+Decimal.swift */,
+				F80F67672C709B820009D517 /* Extension+String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F80F675E2C709B210009D517 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F80F676B2C709B9D0009D517 /* JSON */,
+				F80F67822C709C750009D517 /* HomeCollectionView.swift */,
+				F859F0E72C70964800D3A10E /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F80F675F2C709B2F0009D517 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F80F67692C709B920009D517 /* HomeUIModelHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F80F67602C709B340009D517 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F80F676E2C709BEE0009D517 /* UIHomeModel.swift */,
+				F80F67702C709BF40009D517 /* Category.swift */,
+				F80F67722C709BFE0009D517 /* APIResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F80F67612C709B3A0009D517 /* SwiftUIView */ = {
+			isa = PBXGroup;
+			children = (
+				F80F67742C709C0C0009D517 /* CourseView.swift */,
+				F80F67762C709C1B0009D517 /* ReviewRatingView.swift */,
+				F80F67782C709C2E0009D517 /* UdemyBusinessView.swift */,
+				F80F677A2C709C340009D517 /* CategoriesView.swift */,
+				F80F677C2C709C400009D517 /* MainBannerView.swift */,
+				F80F677E2C709C4D0009D517 /* PlaceholderImageView.swift */,
+				F80F67802C709C5E0009D517 /* FeatureCourseView.swift */,
+			);
+			path = SwiftUIView;
+			sourceTree = "<group>";
+		};
+		F80F67622C709B420009D517 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F80F676B2C709B9D0009D517 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F80F676C2C709BBE0009D517 /* payload.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		F859F0D72C70964800D3A10E = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +169,13 @@
 		F859F0E22C70964800D3A10E /* ios-udemy-home */ = {
 			isa = PBXGroup;
 			children = (
-				F859F0E32C70964800D3A10E /* AppDelegate.swift */,
-				F859F0E52C70964800D3A10E /* SceneDelegate.swift */,
-				F859F0E72C70964800D3A10E /* ViewController.swift */,
-				F859F0E92C70964800D3A10E /* Main.storyboard */,
-				F859F0EC2C70964A00D3A10E /* Assets.xcassets */,
-				F859F0EE2C70964A00D3A10E /* LaunchScreen.storyboard */,
+				F80F67622C709B420009D517 /* View */,
+				F80F67612C709B3A0009D517 /* SwiftUIView */,
+				F80F67602C709B340009D517 /* Model */,
+				F80F675F2C709B2F0009D517 /* Helper */,
+				F80F675E2C709B210009D517 /* Home */,
+				F80F675D2C709B190009D517 /* Extension */,
+				F80F675C2C709AD90009D517 /* Supporting Files */,
 				F859F0F12C70964A00D3A10E /* Info.plist */,
 			);
 			path = "ios-udemy-home";
@@ -83,6 +197,9 @@
 			dependencies = (
 			);
 			name = "ios-udemy-home";
+			packageProductDependencies = (
+				F80F675A2C709A6B0009D517 /* SnapKit */,
+			);
 			productName = "ios-udemy-home";
 			productReference = F859F0E02C70964800D3A10E /* ios-udemy-home.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +228,9 @@
 				Base,
 			);
 			mainGroup = F859F0D72C70964800D3A10E;
+			packageReferences = (
+				F80F67592C709A6B0009D517 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F859F0E12C70964800D3A10E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +247,7 @@
 			files = (
 				F859F0ED2C70964A00D3A10E /* Assets.xcassets in Resources */,
 				F859F0F02C70964A00D3A10E /* Base in Resources */,
+				F80F676D2C709BBE0009D517 /* payload.json in Resources */,
 				F859F0EB2C70964800D3A10E /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +259,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80F67662C709B780009D517 /* Extension+Decimal.swift in Sources */,
+				F80F67642C709B670009D517 /* Extension+UICollectionViewCell.swift in Sources */,
+				F80F67682C709B820009D517 /* Extension+String.swift in Sources */,
+				F80F67732C709BFE0009D517 /* APIResponse.swift in Sources */,
 				F859F0E82C70964800D3A10E /* ViewController.swift in Sources */,
+				F80F67832C709C750009D517 /* HomeCollectionView.swift in Sources */,
+				F80F676F2C709BEE0009D517 /* UIHomeModel.swift in Sources */,
+				F80F677F2C709C4D0009D517 /* PlaceholderImageView.swift in Sources */,
+				F80F67712C709BF40009D517 /* Category.swift in Sources */,
+				F80F67792C709C2E0009D517 /* UdemyBusinessView.swift in Sources */,
+				F80F677B2C709C340009D517 /* CategoriesView.swift in Sources */,
+				F80F67772C709C1B0009D517 /* ReviewRatingView.swift in Sources */,
+				F80F67752C709C0C0009D517 /* CourseView.swift in Sources */,
+				F80F677D2C709C400009D517 /* MainBannerView.swift in Sources */,
+				F80F676A2C709B920009D517 /* HomeUIModelHelper.swift in Sources */,
+				F80F67812C709C5E0009D517 /* FeatureCourseView.swift in Sources */,
 				F859F0E42C70964800D3A10E /* AppDelegate.swift in Sources */,
 				F859F0E62C70964800D3A10E /* SceneDelegate.swift in Sources */,
 			);
@@ -295,11 +431,13 @@
 				DEVELOPMENT_TEAM = G6HATL4S2M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-udemy-home/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Udemy;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +461,13 @@
 				DEVELOPMENT_TEAM = G6HATL4S2M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-udemy-home/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Udemy;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F80F67592C709A6B0009D517 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F80F675A2C709A6B0009D517 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F80F67592C709A6B0009D517 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F859F0D82C70964800D3A10E /* Project object */;
 }
