@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F80F675B2C709A6B0009D517 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F80F675A2C709A6B0009D517 /* SnapKit */; };
-		F80F67642C709B670009D517 /* Extension+UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67632C709B670009D517 /* Extension+UICollectionViewCell.swift */; };
-		F80F67662C709B780009D517 /* Extension+Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67652C709B780009D517 /* Extension+Decimal.swift */; };
-		F80F67682C709B820009D517 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67672C709B820009D517 /* Extension+String.swift */; };
+		F80F67642C709B670009D517 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67632C709B670009D517 /* UICollectionViewCell+Extension.swift */; };
+		F80F67662C709B780009D517 /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67652C709B780009D517 /* Decimal+Extension.swift */; };
+		F80F67682C709B820009D517 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67672C709B820009D517 /* String+Extension.swift */; };
 		F80F676A2C709B920009D517 /* HomeUIModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67692C709B920009D517 /* HomeUIModelHelper.swift */; };
 		F80F676D2C709BBE0009D517 /* payload.json in Resources */ = {isa = PBXBuildFile; fileRef = F80F676C2C709BBE0009D517 /* payload.json */; };
 		F80F676F2C709BEE0009D517 /* UIHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F676E2C709BEE0009D517 /* UIHomeModel.swift */; };
@@ -33,6 +33,7 @@
 		F80F67912C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67902C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift */; };
 		F80F67942C716CDC0009D517 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67932C716CDC0009D517 /* CourseDetailViewController.swift */; };
 		F80F67962C716D1F0009D517 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67952C716D1F0009D517 /* CourseDetailView.swift */; };
+		F80F67982C71777C0009D517 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67972C71777C0009D517 /* FileManager+Extension.swift */; };
 		F859F0E42C70964800D3A10E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E32C70964800D3A10E /* AppDelegate.swift */; };
 		F859F0E62C70964800D3A10E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E52C70964800D3A10E /* SceneDelegate.swift */; };
 		F859F0E82C70964800D3A10E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E72C70964800D3A10E /* HomeViewController.swift */; };
@@ -42,9 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F80F67632C709B670009D517 /* Extension+UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionViewCell.swift"; sourceTree = "<group>"; };
-		F80F67652C709B780009D517 /* Extension+Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Decimal.swift"; sourceTree = "<group>"; };
-		F80F67672C709B820009D517 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		F80F67632C709B670009D517 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		F80F67652C709B780009D517 /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
+		F80F67672C709B820009D517 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F80F67692C709B920009D517 /* HomeUIModelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIModelHelper.swift; sourceTree = "<group>"; };
 		F80F676C2C709BBE0009D517 /* payload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payload.json; sourceTree = "<group>"; };
 		F80F676E2C709BEE0009D517 /* UIHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHomeModel.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		F80F67902C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		F80F67932C716CDC0009D517 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		F80F67952C716D1F0009D517 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
+		F80F67972C71777C0009D517 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		F859F0E02C70964800D3A10E /* ios-udemy-home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-udemy-home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F859F0E32C70964800D3A10E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F859F0E52C70964800D3A10E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,9 +106,10 @@
 		F80F675D2C709B190009D517 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F80F67632C709B670009D517 /* Extension+UICollectionViewCell.swift */,
-				F80F67652C709B780009D517 /* Extension+Decimal.swift */,
-				F80F67672C709B820009D517 /* Extension+String.swift */,
+				F80F67632C709B670009D517 /* UICollectionViewCell+Extension.swift */,
+				F80F67652C709B780009D517 /* Decimal+Extension.swift */,
+				F80F67672C709B820009D517 /* String+Extension.swift */,
+				F80F67972C71777C0009D517 /* FileManager+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -294,10 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80F67662C709B780009D517 /* Extension+Decimal.swift in Sources */,
+				F80F67662C709B780009D517 /* Decimal+Extension.swift in Sources */,
 				F80F67852C709D750009D517 /* AttributedTappableLabel.swift in Sources */,
-				F80F67642C709B670009D517 /* Extension+UICollectionViewCell.swift in Sources */,
-				F80F67682C709B820009D517 /* Extension+String.swift in Sources */,
+				F80F67642C709B670009D517 /* UICollectionViewCell+Extension.swift in Sources */,
+				F80F67682C709B820009D517 /* String+Extension.swift in Sources */,
 				F80F67732C709BFE0009D517 /* APIResponse.swift in Sources */,
 				F859F0E82C70964800D3A10E /* HomeViewController.swift in Sources */,
 				F80F67832C709C750009D517 /* HomeCollectionView.swift in Sources */,
@@ -307,6 +310,7 @@
 				F80F67792C709C2E0009D517 /* UdemyBusinessView.swift in Sources */,
 				F80F67892C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift in Sources */,
 				F80F677B2C709C340009D517 /* CategoriesView.swift in Sources */,
+				F80F67982C71777C0009D517 /* FileManager+Extension.swift in Sources */,
 				F80F67772C709C1B0009D517 /* ReviewRatingView.swift in Sources */,
 				F80F67942C716CDC0009D517 /* CourseDetailViewController.swift in Sources */,
 				F80F67752C709C0C0009D517 /* CourseView.swift in Sources */,

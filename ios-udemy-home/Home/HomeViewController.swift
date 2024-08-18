@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadJson()
+        
         setupView()
         
         let uiModel = HomeUIModel(sectionModels: [
@@ -215,6 +217,11 @@ class HomeViewController: UIViewController {
     func routeToBrowser(link: String) {
         guard let url = URL(string: link) else { return }
         navigationController?.present(SFSafariViewController(url: url), animated: true)
+    }
+    
+    func loadJson() {
+        let response: APIResponse? = FileManager.modelFromJSON(filename: "payload")
+        print(response)
     }
 }
 

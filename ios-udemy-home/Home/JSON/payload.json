@@ -1,6 +1,194 @@
 {
-    "layout": {
-        "name": "hello"
+  "status": 200,
+  "layouts": [
+    {
+      "type": "mainBanner",
+      "id": "79c7e84a-d29b-11ee-8a80-325096b39f47",
+      "value": {
+        "id": "816aa24d-67f5-4ba1-8329-90d9d814610a",
+        "imageLink": "https://source.unsplash.com/random/300×200/?work-in-tech",
+        "title": "Learning that fits",
+        "caption": "Skills for your future and present"
+      }
+    },
+    {
+      "type": "textHeader",
+      "id": "a1e0d43e-6f13-485e-a5c4-e0194fd60740",
+      "value": {
+        "id": "d3313e06-d294-11ee-b184-325096b39f47",
+        "text": "Newest courses in Mobile Development",
+        "highlightedText": "Mobile Development"
+      }
+    },
+    {
+      "type": "courseSwimlane",
+      "id": "8a35e8df-67c5-4ce9-89c6-d3a3704b31db",
+      "value": [
+        {
+          "id": "16ad67c1-29be-4bc9-9088-99ebc2e5c010",
+          "imageLink": "https://source.unsplash.com/random/300×200/?software",
+          "title": "iOS & Swift - Server Driven UI CompositionalLayout & SwiftUI",
+          "author": "Kelvin Fok",
+          "rating": 4.5,
+          "reviewCount": 113,
+          "price": 19.99,
+          "tag": "Bestseller"
+        },
+        {
+          "id": "6dbfe4e5-1166-4cbc-b466-89a91edaee91",
+          "imageLink": "https://source.unsplash.com/random/300×200/?software",
+          "title": "MVVM, Combine, SnapKit, Snapshot/UI/Unit Tests",
+          "author": "Kelvin Fok",
+          "rating": 4.7,
+          "reviewCount": 301,
+          "price": 39.99,
+          "tag": "Highest rated"
+        },
+        {
+          "id": "5aa3e190-1234-489c-8edb-b2088184aca8",
+          "imageLink": "https://source.unsplash.com/random/300×200/?software",
+          "title": "Financial App with Stock APIs & Unit Tests",
+          "author": "Kelvin Fok",
+          "rating": 3.9,
+          "reviewCount": 124,
+          "price": 29.99,
+          "tag": "Bestseller"
+        },
+        {
+          "id": "a15eb974-fb80-41ed-96ae-1727530cf012",
+          "imageLink": "https://source.unsplash.com/random/300×200/?software",
+          "title": "Build a library with Swift Package Manager",
+          "author": "Kelvin Fok",
+          "rating": 4.5,
+          "reviewCount": 35,
+          "price": 19.99,
+          "tag": "Bestseller"
+        },
+        {
+          "id": "a15eb974-fb80-41ed-96ae-1727530cf012",
+          "imageLink": "https://source.unsplash.com/random/300×200/?software",
+          "title": "Build To Do List App like Google Task with Firebase & Swift 5",
+          "author": "Kelvin Fok",
+          "rating": 4.7,
+          "reviewCount": 24,
+          "price": 19.99,
+          "tag": "Bestseller"
+        },
+        {
+          "id": "b17e94f6-6255-4d6d-80c1-1f6a29c9e752",
+          "imageLink": "https://source.unsplash.com/random/300×200/?software",
+          "title": "Build an Onboarding, Login/Sign-up flow",
+          "author": "Kelvin Fok",
+          "rating": 4.7,
+          "reviewCount": 24,
+          "price": 35.99,
+          "tag": "Bestseller"
+        }
+      ]
+    },
+    {
+      "type": "textHeader",
+      "id": "1aabad06-8108-49d1-a5d7-5dd501d540a6",
+      "value": {
+        "id": "d707bb5d-516f-451f-91b6-aa4d47f20e9a",
+        "text": "Categories"
+      }
+    },
+    {
+      "type": "categories",
+      "id": "82af30e4-f992-45ba-b270-338d73a474c0",
+      "value": {
+        "id": "daa15064-bbce-43c8-8b5d-f7584569ce53",
+        "titles": [
+          "Development",
+          "Business",
+          "Office Productivity",
+          "Teaching & Academics",
+          "Finance & Accounting",
+          "IT & Software",
+          "Personal Development",
+          "Marketing",
+          "Photography & Video",
+          "Design",
+          "Lifestyle",
+          "Music"
+        ]
+      }
+    },
+    {
+      "type": "textHeader",
+      "id": "5b9a36b5-280c-4efe-b53f-b0e2fb1b6f9f",
+      "value": {
+        "id": "e3cb22b5-ddef-488f-955c-4f0b2ab251f0",
+        "text": "Because you viewed \"How to land yourself a job as a staff engineer and double your salary\"",
+        "highlightedText": "How to land yourself a job as a staff engineer and double your salary"
+      }
+    },
+    {
+      "type": "courseSwimlane",
+      "id": "62ca0bc1-34e1-4e6a-90ca-0da49482f77c",
+      "value": [
+        {
+          "id": "366edc9c-23ae-4a3f-a821-1bb187a95c5d",
+          "imageLink": "https://source.unsplash.com/random/300×200/?software",
+          "title": "iOS & Swift - Server Driven UI CompositionalLayout & SwiftUI",
+          "author": "Kelvin Fok",
+          "rating": 1,
+          "reviewCount": 113,
+          "price": 19.99,
+          "tag": "Bestseller"
+        },
+        {
+          "id": "a769f328-5b4f-45e5-9587-357675ec4361",
+          "imageLink": "https://source.unsplash.com/random/300×200/?software",
+          "title": "iOS & Swift - Server Driven UI CompositionalLayout & SwiftUI",
+          "author": "Kelvin Fok",
+          "rating": 1,
+          "reviewCount": 113,
+          "price": 19.99,
+          "tag": "Bestseller"
+        },
+        {
+          "id": "48d2a30a-c95a-4ea6-926f-db46dcc83e5c",
+          "imageLink": "https://source.unsplash.com/random/300×200/?software",
+          "title": "iOS & Swift - Server Driven UI CompositionalLayout & SwiftUI",
+          "author": "Kelvin Fok",
+          "rating": 1,
+          "reviewCount": 113,
+          "price": 19.99,
+          "tag": "Bestseller"
+        }
+      ]
+    },
+    {
+      "type": "textHeader",
+      "id": "af682035-63b8-43e3-a931-2e310a1dfab8",
+      "value": {
+        "id": "2498cd41-6fd9-445a-a49f-9bb24f4213e9",
+        "text": "Top course of the year"
+      }
+    },
+    {
+      "type": "featuredCourse",
+      "id": "f979cd87-9cc2-42e5-abcc-31ec410b53ee",
+      "value": {
+        "id": "87652fde-68be-408c-8f4a-93900e1c67e7",
+        "imageLink": "https://source.unsplash.com/random/300×200/?software",
+        "title": "iOS & Swift - Server Driven UI CompositionalLayout & SwiftUI",
+        "author": "Kelvin Fok",
+        "rating": 1,
+        "reviewCount": 113,
+        "price": 19.99,
+        "tag": "Bestseller"
+      }
+    },
+    {
+      "type": "udemyBusinessBanner",
+      "id": "c38a3aff-6e93-4cab-991d-31e6c4753be2",
+      "value": {
+        "id": "ff1d709e-8ae6-446a-bc4d-0df30a7e97db",
+        "link": "https://business.udemy.com/"
+      }
     }
+  ]
 }
-
