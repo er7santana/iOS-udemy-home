@@ -33,6 +33,8 @@ struct CategoriesView: View {
                     }
                 }
             }
+            .padding(.vertical, 2)
+            .padding(.horizontal, 1)
         }
     }
 }

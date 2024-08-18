@@ -12,6 +12,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    private let apiClient = APIClient()
     private let collectionView = HomeCollectionView()
     private var cancellables = Set<AnyCancellable>()
     
@@ -22,9 +23,60 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadJson()
-        
+//        loadJson()
+        fetchLayout()
         setupView()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    private func observe() {
+        collectionView.eventPublisher.sink { [weak self] event in
+            switch event {
+            case let .itemTapped(item):
+                self?.handleItemTapped(item: item)
+                break
+            }
+        }
+        .store(in: &cancellables)
+    }
+    
+    private func handleItemTapped(item: HomeUIModel.Item) {
+        switch item {
+        case let .mainBanner(id, imageLink, title, caption):
+            print(">>>>>>>> mainBanner tapped")
+        case let .course(id, imageLink, title, author, rating, reviewCount, price, tag):
+            routeToCourseDetailsViewController(courseTitle: title)
+        case let .textHeader(id, text, highlightedText):
+            print(">>>>>>>> textHeader tapped")
+        case let .udemyBusinessBanner(_, link):
+            routeToBrowser(link: link)
+        case let .categoriesScroller(id, titles):
+            print(">>>>>>>> categories tapped \(titles.first ?? "")")
+        case let .featureCourse(id, imageLink, title, author, rating, reviewCount, price):
+            print(">>>>>>>> feature tapped")
+        }
+    }
+    
+    func setupView() {
+        view.backgroundColor = .systemBackground
+        view.addSubview(collectionView)
+        
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    func fillMockData() {
         
         let uiModel = HomeUIModel(sectionModels: [
             .init(section: .mainBanner(id: UUID().uuidString),
@@ -163,52 +215,6 @@ class HomeViewController: UIViewController {
         collectionView.setDataSource(uiModel: uiModel)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
-    private func observe() {
-        collectionView.eventPublisher.sink { [weak self] event in
-            switch event {
-            case let .itemTapped(item):
-                self?.handleItemTapped(item: item)
-                break
-            }
-        }
-        .store(in: &cancellables)
-    }
-    
-    private func handleItemTapped(item: HomeUIModel.Item) {
-        switch item {
-        case let .mainBanner(id, imageLink, title, caption):
-            print(">>>>>>>> mainBanner tapped")
-        case let .course(id, imageLink, title, author, rating, reviewCount, price, tag):
-            routeToCourseDetailsViewController(courseTitle: title)
-        case let .textHeader(id, text, highlightedText):
-            print(">>>>>>>> textHeader tapped")
-        case let .udemyBusinessBanner(_, link):
-            routeToBrowser(link: link)
-        case let .categoriesScroller(id, titles):
-            print(">>>>>>>> categories tapped \(titles.first ?? "")")
-        case let .featureCourse(id, imageLink, title, author, rating, reviewCount, price):
-            print(">>>>>>>> feature tapped")
-        }
-    }
-    
-    func setupView() {
-        view.addSubview(collectionView)
-        
-        collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
-    
     func routeToCourseDetailsViewController(courseTitle: String) {
         let viewController = CourseDetailViewController(courseTitle: courseTitle)
         navigationController?.pushViewController(viewController, animated: true)
@@ -220,8 +226,25 @@ class HomeViewController: UIViewController {
     }
     
     func loadJson() {
-        let response: APIResponse? = FileManager.modelFromJSON(filename: "payload")
-        print(response)
+        guard let apiResponse: APIResponse = FileManager.modelFromJSON(filename: "payload") else { return }
+        
+        let uiModel = HomeUIModelHelper.makeUIModel(response: apiResponse)
+        collectionView.setDataSource(uiModel: uiModel)
+    }
+    
+    func fetchLayout() {
+        apiClient.fetchLayout()
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                if case let .failure(error) = completion {
+                    print("error: \(error)")
+                }
+            } receiveValue: { [weak self] apiResponse in
+                let uiModel = HomeUIModelHelper.makeUIModel(response: apiResponse)
+                self?.collectionView.setDataSource(uiModel: uiModel)
+            }
+            .store(in: &cancellables)
+
     }
 }
 

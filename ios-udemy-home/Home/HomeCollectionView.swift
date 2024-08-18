@@ -166,7 +166,7 @@ final class HomeCollectionView: UICollectionView {
     func makeCategoriesSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(88))
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(90))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10

@@ -66,7 +66,7 @@ struct APIResponse: Decodable {
     struct TextHeader: Decodable {
         let id: String
         let text: String
-        let highlhtedText: String?
+        let highlightedText: String?
     }
     
     struct Course: Decodable {

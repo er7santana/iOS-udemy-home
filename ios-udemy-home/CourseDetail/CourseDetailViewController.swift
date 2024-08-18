@@ -24,6 +24,7 @@ final class CourseDetailViewController: UIViewController {
     }
    
     func setup() {
+        view.backgroundColor = .systemBackground
         hostingViewController = UIHostingController(rootView: CourseDetailView(title: courseTitle))
         view.addSubview(hostingViewController.view)
         hostingViewController.view.clipsToBounds = true

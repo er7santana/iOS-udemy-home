@@ -13,7 +13,7 @@
 		F80F67682C709B820009D517 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67672C709B820009D517 /* String+Extension.swift */; };
 		F80F676A2C709B920009D517 /* HomeUIModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67692C709B920009D517 /* HomeUIModelHelper.swift */; };
 		F80F676D2C709BBE0009D517 /* payload.json in Resources */ = {isa = PBXBuildFile; fileRef = F80F676C2C709BBE0009D517 /* payload.json */; };
-		F80F676F2C709BEE0009D517 /* UIHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F676E2C709BEE0009D517 /* UIHomeModel.swift */; };
+		F80F676F2C709BEE0009D517 /* HomeUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F676E2C709BEE0009D517 /* HomeUIModel.swift */; };
 		F80F67712C709BF40009D517 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67702C709BF40009D517 /* Category.swift */; };
 		F80F67732C709BFE0009D517 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67722C709BFE0009D517 /* APIResponse.swift */; };
 		F80F67752C709C0C0009D517 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67742C709C0C0009D517 /* CourseView.swift */; };
@@ -34,6 +34,7 @@
 		F80F67942C716CDC0009D517 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67932C716CDC0009D517 /* CourseDetailViewController.swift */; };
 		F80F67962C716D1F0009D517 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67952C716D1F0009D517 /* CourseDetailView.swift */; };
 		F80F67982C71777C0009D517 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67972C71777C0009D517 /* FileManager+Extension.swift */; };
+		F80F679A2C71A9220009D517 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67992C71A9220009D517 /* APIClient.swift */; };
 		F859F0E42C70964800D3A10E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E32C70964800D3A10E /* AppDelegate.swift */; };
 		F859F0E62C70964800D3A10E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E52C70964800D3A10E /* SceneDelegate.swift */; };
 		F859F0E82C70964800D3A10E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E72C70964800D3A10E /* HomeViewController.swift */; };
@@ -48,7 +49,7 @@
 		F80F67672C709B820009D517 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F80F67692C709B920009D517 /* HomeUIModelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIModelHelper.swift; sourceTree = "<group>"; };
 		F80F676C2C709BBE0009D517 /* payload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payload.json; sourceTree = "<group>"; };
-		F80F676E2C709BEE0009D517 /* UIHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHomeModel.swift; sourceTree = "<group>"; };
+		F80F676E2C709BEE0009D517 /* HomeUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIModel.swift; sourceTree = "<group>"; };
 		F80F67702C709BF40009D517 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F80F67722C709BFE0009D517 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		F80F67742C709C0C0009D517 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		F80F67932C716CDC0009D517 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		F80F67952C716D1F0009D517 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		F80F67972C71777C0009D517 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		F80F67992C71A9220009D517 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F859F0E02C70964800D3A10E /* ios-udemy-home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-udemy-home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F859F0E32C70964800D3A10E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F859F0E52C70964800D3A10E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,9 +137,10 @@
 		F80F67602C709B340009D517 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F80F676E2C709BEE0009D517 /* UIHomeModel.swift */,
+				F80F676E2C709BEE0009D517 /* HomeUIModel.swift */,
 				F80F67702C709BF40009D517 /* Category.swift */,
 				F80F67722C709BFE0009D517 /* APIResponse.swift */,
+				F80F67992C71A9220009D517 /* APIClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,9 +305,10 @@
 				F80F67642C709B670009D517 /* UICollectionViewCell+Extension.swift in Sources */,
 				F80F67682C709B820009D517 /* String+Extension.swift in Sources */,
 				F80F67732C709BFE0009D517 /* APIResponse.swift in Sources */,
+				F80F679A2C71A9220009D517 /* APIClient.swift in Sources */,
 				F859F0E82C70964800D3A10E /* HomeViewController.swift in Sources */,
 				F80F67832C709C750009D517 /* HomeCollectionView.swift in Sources */,
-				F80F676F2C709BEE0009D517 /* UIHomeModel.swift in Sources */,
+				F80F676F2C709BEE0009D517 /* HomeUIModel.swift in Sources */,
 				F80F677F2C709C4D0009D517 /* PlaceholderImageView.swift in Sources */,
 				F80F67712C709BF40009D517 /* Category.swift in Sources */,
 				F80F67792C709C2E0009D517 /* UdemyBusinessView.swift in Sources */,
