@@ -6,6 +6,7 @@
 //
 
 import Combine
+import SafariServices
 import SnapKit
 import UIKit
 
@@ -160,6 +161,16 @@ class HomeViewController: UIViewController {
         collectionView.setDataSource(uiModel: uiModel)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     private func observe() {
         collectionView.eventPublisher.sink { [weak self] event in
             switch event {
@@ -173,17 +184,17 @@ class HomeViewController: UIViewController {
     
     private func handleItemTapped(item: HomeUIModel.Item) {
         switch item {
-        case .mainBanner(let id, let imageLink, let title, let caption):
+        case let .mainBanner(id, imageLink, title, caption):
             print(">>>>>>>> mainBanner tapped")
-        case .course(let id, let imageLink, let title, let author, let rating, let reviewCount, let price, let tag):
-            print(">>>>>>>> course tapped \(id)")
-        case .textHeader(let id, let text, let highlightedText):
+        case let .course(id, imageLink, title, author, rating, reviewCount, price, tag):
+            routeToCourseDetailsViewController(courseTitle: title)
+        case let .textHeader(id, text, highlightedText):
             print(">>>>>>>> textHeader tapped")
-        case .udemyBusinessBanner(let id, let link):
-            print(">>>>>>>> businessBanner tapped")
-        case .categoriesScroller(let id, let titles):
+        case let .udemyBusinessBanner(_, link):
+            routeToBrowser(link: link)
+        case let .categoriesScroller(id, titles):
             print(">>>>>>>> categories tapped \(titles.first ?? "")")
-        case .featureCourse(let id, let imageLink, let title, let author, let rating, let reviewCount, let price):
+        case let .featureCourse(id, imageLink, title, author, rating, reviewCount, price):
             print(">>>>>>>> feature tapped")
         }
     }
@@ -194,6 +205,16 @@ class HomeViewController: UIViewController {
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    func routeToCourseDetailsViewController(courseTitle: String) {
+        let viewController = CourseDetailViewController(courseTitle: courseTitle)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func routeToBrowser(link: String) {
+        guard let url = URL(string: link) else { return }
+        navigationController?.present(SFSafariViewController(url: url), animated: true)
     }
 }
 

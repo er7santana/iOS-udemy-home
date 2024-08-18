@@ -31,6 +31,8 @@
 		F80F678D2C709DA10009D517 /* TextHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F678C2C709DA10009D517 /* TextHeaderCollectionViewCell.swift */; };
 		F80F678F2C709DAB0009D517 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F678E2C709DAB0009D517 /* CategoriesCollectionViewCell.swift */; };
 		F80F67912C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67902C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift */; };
+		F80F67942C716CDC0009D517 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67932C716CDC0009D517 /* CourseDetailViewController.swift */; };
+		F80F67962C716D1F0009D517 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F67952C716D1F0009D517 /* CourseDetailView.swift */; };
 		F859F0E42C70964800D3A10E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E32C70964800D3A10E /* AppDelegate.swift */; };
 		F859F0E62C70964800D3A10E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E52C70964800D3A10E /* SceneDelegate.swift */; };
 		F859F0E82C70964800D3A10E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859F0E72C70964800D3A10E /* HomeViewController.swift */; };
@@ -63,6 +65,8 @@
 		F80F678C2C709DA10009D517 /* TextHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		F80F678E2C709DAB0009D517 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F80F67902C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		F80F67932C716CDC0009D517 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
+		F80F67952C716D1F0009D517 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		F859F0E02C70964800D3A10E /* ios-udemy-home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-udemy-home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F859F0E32C70964800D3A10E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F859F0E52C70964800D3A10E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				F80F677C2C709C400009D517 /* MainBannerView.swift */,
 				F80F677E2C709C4D0009D517 /* PlaceholderImageView.swift */,
 				F80F67802C709C5E0009D517 /* FeatureCourseView.swift */,
+				F80F67952C716D1F0009D517 /* CourseDetailView.swift */,
 			);
 			path = SwiftUIView;
 			sourceTree = "<group>";
@@ -171,6 +176,14 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		F80F67922C716CD00009D517 /* CourseDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F80F67932C716CDC0009D517 /* CourseDetailViewController.swift */,
+			);
+			path = CourseDetail;
+			sourceTree = "<group>";
+		};
 		F859F0D72C70964800D3A10E = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +203,7 @@
 		F859F0E22C70964800D3A10E /* ios-udemy-home */ = {
 			isa = PBXGroup;
 			children = (
+				F80F67922C716CD00009D517 /* CourseDetail */,
 				F80F67622C709B420009D517 /* View */,
 				F80F67612C709B3A0009D517 /* SwiftUIView */,
 				F80F67602C709B340009D517 /* Model */,
@@ -294,6 +308,7 @@
 				F80F67892C709D8B0009D517 /* UdemyBusinessCollectionViewCell.swift in Sources */,
 				F80F677B2C709C340009D517 /* CategoriesView.swift in Sources */,
 				F80F67772C709C1B0009D517 /* ReviewRatingView.swift in Sources */,
+				F80F67942C716CDC0009D517 /* CourseDetailViewController.swift in Sources */,
 				F80F67752C709C0C0009D517 /* CourseView.swift in Sources */,
 				F80F678D2C709DA10009D517 /* TextHeaderCollectionViewCell.swift in Sources */,
 				F80F678B2C709D950009D517 /* CourseCollectionViewCell.swift in Sources */,
@@ -301,6 +316,7 @@
 				F80F678F2C709DAB0009D517 /* CategoriesCollectionViewCell.swift in Sources */,
 				F80F67872C709D7F0009D517 /* MainBannerCollectionViewCell.swift in Sources */,
 				F80F676A2C709B920009D517 /* HomeUIModelHelper.swift in Sources */,
+				F80F67962C716D1F0009D517 /* CourseDetailView.swift in Sources */,
 				F80F67912C709DBA0009D517 /* FeatureCourseCollectionViewCell.swift in Sources */,
 				F80F67812C709C5E0009D517 /* FeatureCourseView.swift in Sources */,
 				F859F0E42C70964800D3A10E /* AppDelegate.swift in Sources */,
